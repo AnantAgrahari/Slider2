@@ -3,24 +3,37 @@ import Card from "./Card";
 import {FiChevronLeft,FiChevronRight} from "react-icons/fi";
  const Testimonials=(props)=>{
     let reviews=props.reviews;
+function leftShiftHandler(){
+
+}
+function rightShiftHandler(){
+
+}
+function surpriseHandler(){
+    
+}
+    
+
+
+
     return(
         <div>       
                   <Card review={reviews[0]} key={reviews.id}/>
-                  <div>
-        <button>
+                  <div className="flex text-3xl mt-5 gap-3 text-violet font-bold mx-auto">
+        <button className="cursor-pointer hover:text-violet-500" onClick={leftShiftHandler}>
             <FiChevronLeft/>
         </button>
-       </div>
-       <div>
-        <button>
+      
+       
+        <button className="cursor-pointer hover:text-violet-500" onClick={rightShiftHandler}>
             <FiChevronRight/>
         </button>
-       </div>
+        </div>
        <div>
-        <button>
-
-        </button>
+        <button className="bg-violet-400 hover:bg-violet-500 transition-all duration-200 cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg" onClick={surpriseHandler}>
         Surprise me
+        </button>
+     
         </div>
                    
                
